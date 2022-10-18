@@ -1,4 +1,22 @@
-.App {
+body {
+  background-color: rgb(197, 143, 143);
+  margin-top: 50px;
+  margin-left: 40%;
+}
+
+img {
+  width: 400px;
+  height: 400px;
+}
+
+p {
+  margin-bottom: 20%;
+}
+
+
+
+
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +53,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
