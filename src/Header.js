@@ -1,7 +1,7 @@
 // import
 import React from "react";
 
-
+// class component
 class Header extends React.Component {
   render() {
     return(
@@ -12,4 +12,5 @@ class Header extends React.Component {
   }
 }
 
+// export
 export default Header 

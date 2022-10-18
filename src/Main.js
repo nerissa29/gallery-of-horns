@@ -2,7 +2,7 @@
 import React from "react";
 
 
-// class
+// class component
 class Main extends React.Component {
   render() {
     return (
