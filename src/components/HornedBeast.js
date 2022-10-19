@@ -12,7 +12,8 @@ class HornedBeast extends React.Component {
   };
 
   handleHeart = () => {
-    this.setState = ({
+    // TA Justin notice the '=' in line 16, helps fix the voting issue
+    this.setState ({
       heart: this.state.heart + 1,
     });
   };
