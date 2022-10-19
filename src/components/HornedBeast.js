@@ -20,13 +20,18 @@ class HornedBeast extends React.Component {
     });
   };
 
+  handleImageClick = () => {
+    this.props.handleOpenModal(this.props.image_url)
+  }
+
+
   render() {
     // TA Tammy helped me understand the logic using the Card container
     // TA Charlie gave the idea of creating className and adding it to the Card className for styling purposes 
     return (
       <>
       <Card className="bg-light border reactCard" style={{ width: '18rem', color:'#873434' }}>
-      <Card.Img variant="top" src={this.props.src} />
+      <Card.Img variant="top" onClick={this.handleImageClick} src={this.props.src} />
       <Card.Body>
         <Card.Title onClick={this.props.addHearts}>{this.props.title}</Card.Title>
         <Card.Text>{this.props.description}</Card.Text>
