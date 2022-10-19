@@ -6,7 +6,7 @@ class Footer extends React.Component {
   render() {
     return (
       <footer>
-        <h2>Nerissa Leynes</h2>
+        <h2>*** Nerissa Leynes ***</h2>
       </footer>
     )
   }
