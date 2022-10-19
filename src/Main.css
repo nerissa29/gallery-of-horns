@@ -2,6 +2,11 @@ main {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  /* justify-content: space-evenly; */
   padding-bottom: 250px;
 }
 
+.className {
+  margin-bottom: 100px;
+  padding: 50px;
+}

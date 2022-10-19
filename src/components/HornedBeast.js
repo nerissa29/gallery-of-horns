@@ -24,7 +24,7 @@ class HornedBeast extends React.Component {
     // TA Tammy helped me understand the logic using the Card container
     return (
       <>
-      <Card style={{ width: '18rem', color:'#873434' }}>
+      <Card className="bg-light border" style={{ width: '18rem', color:'#873434' }}>
       <Card.Img variant="top" src={this.props.src} />
       <Card.Body>
         <Card.Title>{this.props.title}</Card.Title>
