@@ -12,7 +12,6 @@ Finish time: 7:10pm EST
 
 Actual time needed to complete: 50min
 
-
 ## Feature 2
 
 Number and name of feature: Feature #2: Allow users to vote for their favorite beast
@@ -24,7 +23,6 @@ Start time: 7:21pm EST
 Finish time: 8:01pm EST
 
 Actual time needed to complete: 40min
-
 
 ## Feature 3
 
