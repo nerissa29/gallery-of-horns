@@ -6,7 +6,7 @@ class Header extends React.Component {
   render() {
     return(
       <header>
-        <h1>Welcome to the Animal Section!</h1>
+        <h1>Welcome to the Animal Section! {this.props.heart}</h1>
       </header>
     )
   }

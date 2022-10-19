@@ -9,11 +9,29 @@ import "./App.css";
 
 // class component
 class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      heart: ''
+    }
+
+  }
+
+  addHearts = () => {
+    this.setState({
+      heart: this.state.heart + '♥️'
+    })
+  }
+
   render() {
     return (
       <>
-      <Header />
-      <Main />
+      <Header 
+        heart = {this.state.heart}
+      />
+      <Main 
+        addHearts={this.addHearts}     
+      />
       <Footer />
       </>
     )

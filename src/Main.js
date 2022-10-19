@@ -18,6 +18,7 @@ class Main extends React.Component {
           src={animals.image_url}
           description={animals.description}
           key={animals._id}
+          addHearts={this.props.addHearts}
         />
       )
     });

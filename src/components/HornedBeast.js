@@ -28,7 +28,7 @@ class HornedBeast extends React.Component {
       <Card className="bg-light border reactCard" style={{ width: '18rem', color:'#873434' }}>
       <Card.Img variant="top" src={this.props.src} />
       <Card.Body>
-        <Card.Title>{this.props.title}</Card.Title>
+        <Card.Title onClick={this.props.addHearts}>{this.props.title}</Card.Title>
         <Card.Text>{this.props.description}</Card.Text>
         <p>{this.state.heart} Votes</p>
         <Button className="reactButton" variant="primary" onClick={this.handleHeart}>♥️ Favorites</Button>
