@@ -22,26 +22,18 @@ class HornedBeast extends React.Component {
 
   render() {
     // TA Tammy helped me understand the logic using the Card container
+    // TA Charlie gave the idea of creating className and adding it to the Card className for styling purposes 
     return (
       <>
-      <Card className="bg-light border" style={{ width: '18rem', color:'#873434' }}>
+      <Card className="bg-light border reactCard" style={{ width: '18rem', color:'#873434' }}>
       <Card.Img variant="top" src={this.props.src} />
       <Card.Body>
         <Card.Title>{this.props.title}</Card.Title>
         <Card.Text>{this.props.description}</Card.Text>
         <p>{this.state.heart} Votes</p>
-        <Button variant="primary" onClick={this.handleHeart}>♥️ Favorites</Button>
+        <Button className="reactButton" variant="primary" onClick={this.handleHeart}>♥️ Favorites</Button>
       </Card.Body>
     </Card>
-      {/* <h2>{this.props.title}</h2>
-      <p>{this.state.heart} Votes</p>
-      <p onClick={this.handleHeart}>♥️ Favorites</p>
-      <img 
-        src={this.props.src} 
-        alt={this.props.alt}
-        title={this.props.title} 
-      />
-      <p id="description">{this.props.description}</p> */}
       </>
     )
   }

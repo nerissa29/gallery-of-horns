@@ -1,12 +1,18 @@
 main {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
-  /* justify-content: space-evenly; */
+  justify-content: space-evenly;
   padding-bottom: 250px;
 }
 
-.className {
+.reactCard {
   margin-bottom: 100px;
-  padding: 50px;
+  padding: 1px;
+  height: 550px;
+  margin-bottom: 20px;
+}
+
+.reactButton {
+  position: absolute;
+  bottom: 5%;
 }
