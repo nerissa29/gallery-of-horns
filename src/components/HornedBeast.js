@@ -21,18 +21,16 @@ class HornedBeast extends React.Component {
   };
 
   render() {
-    console.log('app state', this.state);
+    // TA Tammy helped me understand the logic using the Card container
     return (
       <>
-      <Card style={{ width: '18rem' }}>
+      <Card style={{ width: '18rem', color:'#873434' }}>
       <Card.Img variant="top" src={this.props.src} />
       <Card.Body>
-        <Card.Title>Card Title</Card.Title>
-        <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
+        <Card.Title>{this.props.title}</Card.Title>
+        <Card.Text>{this.props.description}</Card.Text>
+        <p>{this.state.heart} Votes</p>
+        <Button variant="primary" onClick={this.handleHeart}>♥️ Favorites</Button>
       </Card.Body>
     </Card>
       {/* <h2>{this.props.title}</h2>

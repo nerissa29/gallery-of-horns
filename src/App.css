@@ -1,29 +1,33 @@
 body {
   background-color: rgb(197, 143, 143);
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center; */
-   margin-top: 50px;
-   margin-left: 30%;
-
 } 
 
 img {
-  width: 400px;
-  height: 400px;
+  width: 250px;
+  height: 250px;
 }
 
-#description {
-  margin-bottom: 20%;
+header h1, footer h2 {
+  margin-left: 35%;
 }
 
-/* main {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}  */
+header, footer {
+  background-color: rgb(50, 11, 30);
+  color:rgb(197, 143, 143);
+  padding: 30px;
+}
 
+header {
+  margin-bottom: 50px;
+}
 
+button:hover {
+  transform: scale(1.2, 1.2); 
+}
+
+button:active {
+  transform: scale(1,1);
+}
 
 
 /* .App {

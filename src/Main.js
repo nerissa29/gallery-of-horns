@@ -2,7 +2,7 @@
 import React from "react";
 import HornedBeast from "./components/HornedBeast.js";
 import data from "./components/data.json";
-// import "./Main.css";
+import "./Main.css";
 
 
 // class component
