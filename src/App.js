@@ -70,20 +70,7 @@ class App extends React.Component {
           description={this.state.description}
         />
 
-
         <Footer />
-
-
-        {/* <Modal 
-        show={this.state.showModal}
-        onHide={this.handleCloseModal}
-      >
-        <Modal.Header closeButton>
-          <Modal.Title>{this.state.selectedImage}</Modal.Title>
-        </Modal.Header>
-
-      </Modal> */}
-
 
       </>
     )
