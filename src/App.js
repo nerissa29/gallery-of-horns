@@ -28,8 +28,9 @@ class App extends React.Component {
     })
   }
 
-
+  // TA Tammy introduced the .find()
   handleOpenModal = (image_url) => {
+    // .find() from MDN Docs
     const selectedBeast = data.find(beasts => beasts.image_url === image_url)
     console.log(image_url);
 
@@ -37,6 +38,7 @@ class App extends React.Component {
       showModal: true,
       selectedImage: selectedBeast.image_url,
       title: selectedBeast.title,
+      description: selectedBeast.description,
     })
   }
 
@@ -60,12 +62,12 @@ class App extends React.Component {
         />
 
         <SelectedBeast
-          // handleOpenModal={this.handleOpenModal}
           show={this.state.showModal}
           onHide={this.state.handleCloseModal}
           handleCloseModal={this.handleCloseModal}
           selectedImage={this.state.selectedImage}
           title={this.state.title}
+          description={this.state.description}
         />
 
 

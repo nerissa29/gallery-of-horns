@@ -14,13 +14,14 @@ class HornedBeast extends React.Component {
   };
 
   handleHeart = () => {
-    // TA Justin notice the '=' in line 16, helps fix the voting issue
+    // TA Justin notice the '=' in .setState, helps fix the voting issue
     this.setState ({
       heart: this.state.heart + 1,
     });
   };
 
   handleImageClick = () => {
+    // TA Ben advised to use the image props being used, which is src and not image_url
     this.props.handleOpenModal(this.props.src)
   }
 

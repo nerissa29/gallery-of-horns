@@ -7,6 +7,11 @@ img {
   height: 250px;
 }
 
+.selectedImg {
+  width: 450px;
+  height: 450px;  
+}
+
 header h1, footer h2 {
   margin-left: 35%;
 }
@@ -29,6 +34,21 @@ button:hover {
 button:active {
   transform: scale(1,1);
 }
+
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+.modal {
+  padding: 10%;
+}
+
+.closedBtnModal {
+  color: blueviolet;
+  font-weight: bold;
+}
+
 
 
 /* .App {
