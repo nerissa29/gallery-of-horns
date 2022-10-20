@@ -38,6 +38,7 @@ button:active {
 .row {
   display: flex;
   justify-content: center;
+  font-size: 100%;
 }
 
 .modal {
