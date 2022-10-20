@@ -12,8 +12,13 @@ img {
   height: 450px;  
 }
 
-header h1, footer h2 {
+footer h2 {
   margin-left: 35%;
+}
+
+.searchBar {
+  position: absolute;
+  right: 5%;
 }
 
 header, footer {
@@ -50,7 +55,9 @@ button:active {
   font-weight: bold;
 }
 
-
+.searchBar {
+  width: 50%;
+}
 
 /* .App {
   text-align: center;
