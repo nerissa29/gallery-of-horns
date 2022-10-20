@@ -7,11 +7,14 @@ class SelectedBeast extends React.Component {
     return (
 
       <Modal
-        show = {this.props.showModal }
-        onHide = {this.handleCloseModal }
+        show = {this.props.show}
+        onHide = {this.props.handleCloseModal}
       >
         <Modal.Header closeButton>
-          <Modal.Title>{this.props.selectedImage}</Modal.Title>
+          <Modal.Body>
+            {/* test */}
+            <img src={this.props.selectedImage} alt={this.props.title}></img>
+          </Modal.Body>
         </Modal.Header>
 
       </Modal >

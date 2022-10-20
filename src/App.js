@@ -17,7 +17,7 @@ class App extends React.Component {
     this.state = {
       heart: '',
       showModal: false,
-      selectedImage: {}
+      selectedImage: {},
     }
 
   }
@@ -28,10 +28,15 @@ class App extends React.Component {
     })
   }
 
+
   handleOpenModal = (image_url) => {
+    const selectedBeast = data.find(beasts => beasts.image_url === image_url)
+    console.log(image_url);
+
     this.setState({
       showModal: true,
-      selectedImage: image_url,
+      selectedImage: selectedBeast.image_url,
+      title: selectedBeast.title,
     })
   }
 
@@ -42,19 +47,32 @@ class App extends React.Component {
   }
 
   render() {
+
     return (
       <>
-      <Header 
-        heart = {this.state.heart}
-      />
-      <Main 
-        addHearts={this.addHearts}
-        handleOpenModal={this.handleOpenModal}
-        data={data}     
-      />
+        <Header
+          heart={this.state.heart}
+        />
+        <Main
+          addHearts={this.addHearts}
+          handleOpenModal={this.handleOpenModal}
+          data={data}
+        />
+
+        <SelectedBeast
+          // handleOpenModal={this.handleOpenModal}
+          show={this.state.showModal}
+          onHide={this.state.handleCloseModal}
+          handleCloseModal={this.handleCloseModal}
+          selectedImage={this.state.selectedImage}
+          title={this.state.title}
+        />
 
 
-      {/* <Modal 
+        <Footer />
+
+
+        {/* <Modal 
         show={this.state.showModal}
         onHide={this.handleCloseModal}
       >
@@ -64,9 +82,7 @@ class App extends React.Component {
 
       </Modal> */}
 
-      <SelectedBeast />
-      
-      <Footer />
+
       </>
     )
   }
