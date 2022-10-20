@@ -5,7 +5,6 @@ import Main from "./Main.js";
 import Footer from "./components/Footer.js";
 import SelectedBeast from "./components/SelectedBeast.js";
 import "./App.css";
-// import Modal from 'react-bootstrap/Modal';
 import data from "./components/data.json";
 
 
@@ -18,6 +17,8 @@ class App extends React.Component {
       heart: '',
       showModal: false,
       selectedImage: {},
+      selectedHorns: {},
+      formData: data,
     }
 
   }
@@ -48,13 +49,46 @@ class App extends React.Component {
     })
   }
 
+  // for form submit
+  handleSubmit = (event) => {
+    event.preventDefault();
+  }
+
   render() {
+
+    
 
     return (
       <>
+
+        
+
         <Header
           heart={this.state.heart}
         />
+
+        {/* <main>
+          <ListGroup></ListGroup>
+          <Form>
+            <Form.Label htmlFor="name"> Name: </Form.Label>
+            <Form.Control id="name" type="text" name="name"></Form.Control>
+
+            <Form.Label htmlFor="age"> Age: </Form.Label>
+            <Form.Control id="age" type="number" name="name"></Form.Control>
+
+            <Form.Group>
+              <legend>
+                <Form.Select name="selectedName">
+                  <option value="All">All</option>
+                  <option value="1">1</option>
+                </Form.Select>
+              </legend>
+            </Form.Group>
+
+
+          </Form>
+        </main> */}
+
         <Main
           addHearts={this.addHearts}
           handleOpenModal={this.handleOpenModal}
