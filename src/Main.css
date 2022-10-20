@@ -12,6 +12,20 @@ main {
   margin-bottom: 20px;
 }
 
+.reactCard:hover {
+  transform: scale(1.01,1.01);
+  box-shadow: 0 0 50px black;
+}
+
+.cardTitle {
+  color: #de6288;
+  cursor: pointer;  
+}
+
+.cardTitle:hover {
+  color:#360a17
+}
+
 .reactButton {
   position: absolute;
   bottom: 5%;
