@@ -7,13 +7,6 @@ import Col from 'react-bootstrap/Col';
 
 // class component
 class Header extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      searchInput: '',
-    }
-  }
-
 
   render() {
     return(
