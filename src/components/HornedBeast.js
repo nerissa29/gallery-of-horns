@@ -36,6 +36,7 @@ class HornedBeast extends React.Component {
       <Card.Body>
         <Card.Title className="cardTitle" onClick={this.props.addHearts}>{this.props.title}</Card.Title>
         <Card.Text>{this.props.description}</Card.Text>
+        <p>Has {this.props.horns} horns</p>
         <p>{this.state.heart} Votes</p>
         <Button className="reactButton" variant="primary" onClick={this.handleHeart}>♥️ Favorites</Button>
       </Card.Body>
