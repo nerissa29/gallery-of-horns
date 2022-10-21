@@ -3,9 +3,6 @@ import React from "react";
 import HornedBeast from "./components/HornedBeast.js";
 // import data from "./components/data.json";
 import "./Main.css";
-// import { Form} from 'react-bootstrap';
-// import ListGroup from 'react-bootstrap/ListGroup';
-
 
 // class component
 class Main extends React.Component {
