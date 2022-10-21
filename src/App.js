@@ -20,6 +20,8 @@ class App extends React.Component {
       name: '',
       selectedHorns: {},
       formData: data,
+      // search bar
+      searchInput: '',
     }
 
   }
@@ -98,6 +100,25 @@ class App extends React.Component {
     }
   }
 
+  // search bar event handler
+  handleSubmitSearch = (event) => {
+    event.preventDefault();
+    
+    this.setState({
+      searchInput: event.target.searchInput.value
+    })
+  }
+
+  handleInputSearch = (event) => {
+    let userInput = event.target.value;
+    
+    console.log(userInput);
+    let newFormData = data.filter(element => element.keyword.includes(userInput))
+    this.setState({
+      formData: newFormData
+    })
+  }
+
   render() {
 
     return (
@@ -105,6 +126,9 @@ class App extends React.Component {
 
         <Header
           heart={this.state.heart}
+          handleSubmitSearch={this.handleSubmitSearch}
+          handleInputSearch={this.handleInputSearch}
+          data={this.state.formData}
         />
 
         <main>
