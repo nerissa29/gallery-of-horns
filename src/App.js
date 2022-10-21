@@ -6,7 +6,7 @@ import Footer from "./components/Footer.js";
 import SelectedBeast from "./components/SelectedBeast.js";
 import "./App.css";
 import data from "./components/data.json";
-
+import {Form, Button} from 'react-bootstrap';
 
 
 // class component
@@ -17,6 +17,7 @@ class App extends React.Component {
       heart: '',
       showModal: false,
       selectedImage: {},
+      name: '',
       selectedHorns: {},
       formData: data,
     }
@@ -49,50 +50,91 @@ class App extends React.Component {
     })
   }
 
-  // for form submit
+
+  // form event handlers
   handleSubmit = (event) => {
     event.preventDefault();
+    
+    this.setState({
+      selectedHorns: event.target.selectedHorns.value,
+      name: event.target.name.value
+    })
+  }
+
+  handleInput = (event) => {
+    let userName = event.target.name.value;
+    this.setState({
+      name: userName
+    })
+  }
+
+  handleSelect = (event) => {
+    let selectedHorns = event.target.value;
+
+    if (selectedHorns === 'one') {
+      let newFormData = data.filter(num => num.horns === 1);
+      this.setState({
+        formData: newFormData
+      })
+    } else if (selectedHorns === 'two') {
+      let newFormData = data.filter(num => num.horns === 2);
+      this.setState({
+        formData: newFormData
+      })
+    } else if (selectedHorns === 'three') {
+      let newFormData = data.filter(num => num.horns === 3);
+      this.setState({
+        formData: newFormData
+      })
+    } else if (selectedHorns === 'one-hundred') {
+      let newFormData = data.filter(num => num.horns === 100);
+      this.setState({
+        formData: newFormData
+      }) 
+    } else {
+      this.setState({
+        formData: data
+      })
+    }
   }
 
   render() {
 
-    
-
     return (
       <>
-
-        
 
         <Header
           heart={this.state.heart}
         />
 
-        {/* <main>
-          <ListGroup></ListGroup>
-          <Form>
+        <main>
+          <Form onSubmit={this.handleSubmit}>
             <Form.Label htmlFor="name"> Name: </Form.Label>
-            <Form.Control id="name" type="text" name="name"></Form.Control>
+            <Form.Control id="name" type="text" name="name" onInput={this.handleInput}></Form.Control>
 
             <Form.Label htmlFor="age"> Age: </Form.Label>
             <Form.Control id="age" type="number" name="name"></Form.Control>
 
             <Form.Group>
               <legend>
-                <Form.Select name="selectedName">
+                <Form.Label htmlFor="selectedHorns">Select Beasts by Number of Horns</Form.Label>
+                <Form.Select id="selectedHorns" name="selectedHorns" onChange={this.handleSelect}> 
                   <option value="All">All</option>
-                  <option value="1">1</option>
+                  <option value="one">1</option>
+                  <option value="two">2</option>
+                  <option value="three">3</option>
+                  <option value="one-hundred">100</option>
                 </Form.Select>
               </legend>
             </Form.Group>
-
-
+            <Button type="submit">Submit</Button>
           </Form>
-        </main> */}
+        </main>
 
         <Main
           addHearts={this.addHearts}
           handleOpenModal={this.handleOpenModal}
-          data={data}
+          data={this.state.formData}
         />
 
         <SelectedBeast
