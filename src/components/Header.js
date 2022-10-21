@@ -7,6 +7,14 @@ import Col from 'react-bootstrap/Col';
 
 // class component
 class Header extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      searchInput: '',
+    }
+  }
+
+
   render() {
     return(
       <header>
@@ -18,13 +26,15 @@ class Header extends React.Component {
 
           <Col>
             <Form className="d-flex searchBar">
-              <Form.Control 
+              <Form.Control
+                onInput={this.props.handleInputSearch} 
+                value={this.props.searchInput}
                 type="search"
                 placeholder="Search"
                 className="me-2"
                 aria-label="Search"
               />
-              <Button variant="outline-success">Search</Button>
+              <Button onSubmit={this.props.handleSubmitSearch} variant="outline-success">Search</Button>
             </Form>
 
           </Col>
