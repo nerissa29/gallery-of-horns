@@ -17,6 +17,7 @@ class Main extends React.Component {
         addHearts={this.props.addHearts}
         handleOpenModal={this.props.handleOpenModal}
         horns={animals.horns}
+        keyword={animals.keyword}
       />
     });
 
