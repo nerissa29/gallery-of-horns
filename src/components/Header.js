@@ -18,7 +18,7 @@ class Header extends React.Component {
           </Col>
 
           <Col>
-            <Form className="d-flex searchBar">
+            <Form className="d-flex searchBar" onSubmit={this.props.handleSubmitSearch}>
               <Form.Control
                 onInput={this.props.handleInputSearch} 
                 value={this.props.searchInput}
@@ -27,7 +27,7 @@ class Header extends React.Component {
                 className="me-2"
                 aria-label="Search"
               />
-              <Button onSubmit={this.props.handleSubmitSearch} variant="outline-success">Search</Button>
+              <Button variant="outline-success">Search</Button>
             </Form>
 
           </Col>
