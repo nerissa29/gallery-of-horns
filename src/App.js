@@ -110,7 +110,7 @@ class App extends React.Component {
   }
 
   handleInputSearch = (event) => {
-    let userInput = event.target.value;
+    let userInput = event.target.value.toLowerCase();
     
     console.log(userInput);
     let newFormData = data.filter(element => element.keyword.includes(userInput))

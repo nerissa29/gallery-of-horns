@@ -23,7 +23,7 @@ class Header extends React.Component {
                 onInput={this.props.handleInputSearch} 
                 value={this.props.searchInput}
                 type="search"
-                placeholder="Search"
+                placeholder="Search keyword"
                 className="me-2"
                 aria-label="Search"
               />
